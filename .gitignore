@@ -1,0 +1,7 @@
+node_modules/
+data/
+.run/
+.env
+envincer-*/
+# Fonts are optional and not redistributable here; the CSS falls back to system fonts.
+public/fonts/

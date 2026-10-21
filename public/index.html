@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>envincer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='6' width='26' height='18' rx='3' fill='none' stroke='%23111' stroke-width='3'/%3E%3Cpath d='M10 28h12' stroke='%23111' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="#/">envincer</a>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#/" data-tab="shoot">Shoot</a>
+      <a href="#/runs" data-tab="runs">Runs</a>
+      <a href="#/presets" data-tab="presets">Presets</a>
+    </nav>
+    <div class="chips" id="chips"></div>
+  </header>
+
+  <main id="view"></main>
+
+  <dialog id="lightbox" class="lightbox">
+    <div class="lb-bar">
+      <span class="lb-title" id="lb-title"></span>
+      <span class="lb-meta" id="lb-meta"></span>
+      <span class="grow"></span>
+      <button class="btn" data-lb="prev" aria-label="Previous" title="Previous (←)">←</button>
+      <button class="btn" data-lb="next" aria-label="Next" title="Next (→)">→</button>
+      <button class="btn" data-lb="retake" title="Retake (R)">Retake</button>
+      <button class="btn" data-lb="approve" title="Approve (A)">Approve</button>
+      <button class="btn" data-lb="close" aria-label="Close" title="Close (Esc)">×</button>
+    </div>
+    <div class="lb-stage checker"><img id="lb-img" alt=""></div>
+    <form class="lb-adjust" id="lb-adjust">
+      <input name="instruction" placeholder="Adjust" autocomplete="off" aria-label="Adjust this shot">
+      <button class="btn">Apply</button>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
